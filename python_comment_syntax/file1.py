@@ -2,7 +2,7 @@
 to stay relevant in the industry'''
 
 
-# This line will print my favorite code, so that user can read it
+# This line will print my favorite quote, so that user can read it
 
 print("Change is the only constant thing in the world!, be curious")
 
