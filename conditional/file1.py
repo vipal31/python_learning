@@ -52,3 +52,33 @@ try:
 except ValueError:
     print("Please enter a valid number")
 
+### Guess the random number
+
+import random
+
+random_number= random.randint(1,20)
+print("You need to guess a number between 1 to 20, you will have 3 attempts")
+attempt = 3
+while attempt >0:
+    try:
+       user_number = int(input("Enter a number to guess: "))
+       ## decrase the attempt
+       attempt -= 1
+       if user_number == random_number:
+           print("Bingo, correct number")
+           break
+       # if wrong guess, check the attempt
+       if attempt == 0:
+           print(f"You loose! The correct number {random_number}. Thanks for playing!")
+       else:
+           # Only print message if attempt remain
+            if user_number > random_number:
+                print("To high, try again")
+            else:
+                print("To low, try again")
+            
+    except ValueError:
+        print("Please enter a valid number")
+        attempt -= 1
+
+
