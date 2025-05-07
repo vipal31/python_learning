@@ -60,25 +60,43 @@ random_number= random.randint(1,20)
 print("You need to guess a number between 1 to 20, you will have 3 attempts")
 attempt = 3
 while attempt >0:
+
     try:
        user_number = int(input("Enter a number to guess: "))
        ## decrase the attempt
        attempt -= 1
        if user_number == random_number:
-           print("Bingo, correct number")
-           break
+           play_again = input("Bingo, correct number, Play again? (y/n): ")
+           # Ask for User want to play again
+           if play_again == 'y':
+               random_number = random.randint(1,20)
+               print("New Game started")
+               attempt = 3
+           else:
+               print("Thanks for playing, Good Bye")
+               break
+           
+       
        # if wrong guess, check the attempt
-       if attempt == 0:
+       elif attempt == 0:
            print(f"You loose! The correct number {random_number}. Thanks for playing!")
+           play_again = input("Would you like to play again? (y/n): ")
+           if play_again == 'y':
+                random_number = random.randint(1,20)
+                attempt = 3
+                print("New Game Started")
+           else:
+                print("Thanks for playing")
+                break
+
        else:
            # Only print message if attempt remain
-            if user_number > random_number:
+           
+           if user_number > random_number:
                 print("To high, try again")
-            else:
-                print("To low, try again")
+           else:
+               print("To low, try again")
             
     except ValueError:
         print("Please enter a valid number")
         attempt -= 1
-
-
