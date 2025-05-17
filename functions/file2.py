@@ -27,6 +27,23 @@ print(f"The number 4 is {
 # print full  name,last name
 
 def print_full_name(first_name, last_name):
-    print("Your full name is {} {}".format(first_name ,last_name))
+    print(f"Your full name is {first_name} {last_name}")
 
 print_full_name('Vipal','Gujrathi')
+
+## function to print sum of list
+
+number_list = [1,2,3,4,5]
+
+def sum_of_list(input_list):
+    list_sum = 0
+    for i in number_list:
+        list_sum += i
+    
+    return list_sum
+sum_list = sum_of_list(number_list)
+print(sum_list)
+
+## find larget number for give list
+
+def find_large_number
