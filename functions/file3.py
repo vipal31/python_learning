@@ -59,4 +59,9 @@ list2 = [2,4,6,8,10,12,14,16,18,20]
 result = common_element_in_list(list1,list2)
 print(result)
 
-##
+## sort string alphabetically
+def sort_strings(lst):
+    return sorted(lst)
+
+sorted_list = sort_strings(["Vipal","Gujrathi"])
+print(sorted_list)
