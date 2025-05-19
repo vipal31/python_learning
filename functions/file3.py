@@ -25,7 +25,7 @@ def count_vowels(text):
 
     # Provide detailed output
     if sum_vowels > 0:
-        print(f"Found {sum_vowels} vowels: {', '.join(vowels_found)}")
+        print(f"Found {sum_vowels} vowels: {', '.join(vowels_found)} in {text}")
     else:
         print(f"No vowels found in '{text}'")
 
@@ -43,3 +43,18 @@ def reverse_string(text):
 
 result1 = reverse_string('Vipal')
 print(result1)
+
+## find common element in two list 
+
+def common_element_in_list(list1,list2):
+    common = []
+    for i in list1:
+        if i in list2:
+            common.append(i)
+    return common
+
+list1 = [1,2,3,4,5,6,7,8,9,10]
+list2 = [2,4,6,8,10,12,14,16,18,20]
+
+result = common_element_in_list(list1,list2)
+print(result)
