@@ -11,6 +11,7 @@ Welcome! This repository documents my Python learning journey, organized by topi
     *   Numbers, strings, booleans
 *   **3. Control Flow**
     *   If-else statements, loops (for, while), break/continue/pass
+*   **4. Functions**
 
 ## 🗂️ Folder Structure
 
@@ -22,6 +23,9 @@ Welcome! This repository documents my Python learning journey, organized by topi
 │   └── file1.py
 ├── conditional/
 │   └── file1.py
+|── functions/
+|   └── file1.py
+|   └── file2.py
 └── README.md
 ```
 
