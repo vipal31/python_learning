@@ -13,6 +13,9 @@ Welcome! This repository documents my Python learning journey, organized by topi
     *   If-else statements, loops (for, while), break/continue/pass
 *   **4. Functions**
 
+*   **4 Functions**
+  
+
 ## 🗂️ Folder Structure
 
 ```
