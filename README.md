@@ -12,6 +12,12 @@ Welcome! This repository documents my Python learning journey, organized by topi
 *   **3. Control Flow**
     *   If-else statements, loops (for, while), break/continue/pass
 
+<<<<<<< HEAD
+=======
+*   **4 Functions**
+  
+
+>>>>>>> origin/branch1
 ## 🗂️ Folder Structure
 
 ```
