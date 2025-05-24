@@ -18,11 +18,11 @@ try:
 
     if num >= 90:
         print("Your grade is A")
-    elif num >=80 and num <90:
+    elif num >=80:
         print("Your grade is B")
-    elif num >=70 and num <80:
+    elif num >=70:
         print("Your grade is C")
-    elif num >=60 and num <70:
+    elif num >=60:
         print("Your grade is D")
     else:
         print("Your grade is F")

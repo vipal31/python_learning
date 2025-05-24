@@ -7,10 +7,11 @@ say_hello()  # Output: Hello, World!
 
 # Function with a single parameter
 def greet(name):
-    print(f"Hello, {name}!")
+    return f"Hello, {name}!"
 
 # Call the function with an argument
-greet("Alice")  # Output: Hello, Alice!
+name_Return = greet("Alice")  # Output: Hello, Alice!
+print(name_Return)
 
 # Function that returns a value
 def add_five(number):
