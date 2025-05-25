@@ -94,9 +94,117 @@ while attempt >0:
            
            if user_number > random_number:
                 print("To high, try again")
+                print(f"You have {attempt} remaining")
            else:
                print("To low, try again")
+               print(f"You have {attempt} remaining")
             
     except ValueError:
         print("Please enter a valid number")
         attempt -= 1
+
+### pizza ordering
+print("Welcome to the Python pizza delivery!")
+size = input("Please enter the size of pizza you wish to order? S.M Or L: ").lower()
+pepperoni = input("Do you wish to add pepperoni in your pizza? Y or N: ").lower()
+extra_cheese= input("Do you wish to add extra_cheese on your pizza? Y or N: ").lower()
+
+final_bill = 0
+
+if size == "l":
+    ## large size pizz will be $25
+    pizza_cost = 25
+    if pepperoni == 'y':
+        ## Peperoni will be $3 extra
+        pepperoni_cost = 3
+        if extra_cheese == 'y':
+            ## extra cheese will cost $1 extra
+            cheese_cost = 1
+            final_bill = pepperoni_cost + cheese_cost + pizza_cost
+            print(f"Your total bill will be ${final_bill}")
+        else:
+            final_bill = pepperoni_cost + pizza_cost
+            print(f"Your final bill would be {final_bill}")
+    elif pepperoni == 'n':
+        if extra_cheese == 'y':
+            ## extra cheese will cost $1 extra
+            cheese_cost = 1
+            final_bill = cheese_cost + pizza_cost
+            print(f"Your total bill will be ${final_bill}")     
+        else:
+            final_bill = pizza_cost
+            print(f"Your total bill will for large size pizza ${final_bill}")
+
+elif size == 'm':
+    # medium pizza cost $20
+    medium_pizza_cost = 20
+    if pepperoni == 'y':
+        ## Peperoni will be $3 extra
+        pepperoni_cost = 3
+        if extra_cheese == 'y':
+        ## extra cheese will cost $1 extra
+            cheese_cost = 1
+            final_bill = medium_pizza_cost + pepperoni_cost + cheese_cost
+            print(f"Your total bill will be ${final_bill}")
+        else:
+            final_bill = medium_pizza_cost + pepperoni_cost
+            print(f"Your total bill will be ${final_bill}")
+    elif pepperoni == 'n':
+        if extra_cheese == 'y':
+            ## extra cheese will cost $1 extra
+            cheese_cost = 1
+            final_bill = medium_pizza_cost + cheese_cost
+            print(f"Your total bill will be ${final_bill}")
+        else:
+            final_bill = medium_pizza_cost
+            print(f"Your total bill will be ${final_bill}")
+
+else:
+    #small size pizza cost
+    small_pizza_cost = 15
+    if pepperoni == 'y':
+        ## Peperoni will be $2 extra
+        pepperoni_cost = 2
+        if extra_cheese == 'y':
+            ## extra cheese will cost $1 extra
+            cheese_cost = 1
+            final_bill = small_pizza_cost + pepperoni_cost + cheese_cost
+            print(f"Your total bill will be ${final_bill}")
+        else:
+            final_bill = small_pizza_cost + pepperoni_cost
+            print(f"Your total bill will be ${final_bill}")
+    elif pepperoni == 'n':
+        if extra_cheese == 'y':
+            ## extra cheese will cost $1 extra
+            cheese_cost = 1
+            final_bill = small_pizza_cost + cheese_cost
+            print(f"Your total bill will be ${final_bill}")
+    else:
+        final_bill = small_pizza_cost
+        print(f"Your total bill will be ${final_bill}")
+    
+
+# second attempt
+
+bill = 0
+
+if size == 's':
+    bill += small_pizza_cost
+elif size == 'm':
+    bill += medium_pizza_cost
+else:
+    bill += pizza_cost
+
+'''
+pepperoni
+'''
+if pepperoni == 'y':
+    if size == 's':
+        bill += 2
+    else:
+        bill += 3
+
+"""extra_cheese"""
+
+if extra_cheese =='y':
+    bill += 1
